@@ -1,0 +1,27 @@
+{
+  "parser": "babel-eslint",
+  // 引用 airbnb 代码规范
+  "extends": "airbnb",
+  // 执行环境
+  "env": {
+    "browser": true,
+    // 在浏览器端执行
+    "es6": true
+    // 检测es6
+  },
+  "parserOptions": {
+    // 用模块的方法来编写代码
+    "sourceType": "module",
+    // 检查es6语法
+    "ecmaVersion": 6
+  },
+  // 自定义规则
+  "rules": {
+    // allow async-await
+    "generator-star-spacing": "off",
+    // 方法前面有是否有空格
+    "space-before-function-paren": 0,
+    // 默认不缩进
+    "indent": 0
+  }
+}
