@@ -1,10 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Index from './app/index';
+import {BrowserRouter} from 'react-router-dom';
+import App from './pages';
 import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(
-  <Index />,
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>,
   document.getElementById('root')
 );
 registerServiceWorker();
