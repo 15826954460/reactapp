@@ -132,14 +132,7 @@ export function postFetch(url, params) {
 const WebAPI = {
   // 主题页面
   topics: {
-    topic: getFetch('topics').then((res) => {
-      console.log(res)
-      if (res.success) {
-        return res.data
-      }
-    }).cache(err => {
-      throw new Error(err)
-    })
+    topic: getFetch
   }
 }
 

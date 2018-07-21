@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Link, Switch} from 'react-router-dom';
-import Routes from '../config/router';
+import {Routes} from '../config/router';
 import './test.css'
 export default class App extends Component {
   render() {
