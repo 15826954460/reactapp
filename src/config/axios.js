@@ -1,12 +1,19 @@
 import axios from 'axios';
 import qs from 'qs'; // 用来序列化请求参数
+/**
+ * 2018-30-29
+ * 域名的配置
+ */
 const initConfig = {
   develop: true,// 开发环境 or 正式环境
   development: 'https://cnodejs.org/api/v1/',// 开发环境主域名
   test: '',// 测试环境主域名
 }
-
-export function getDomain() {
+/**
+ * 2018-31-29
+ * 获取域名地址
+ */
+function getDomain() {
   const {develop, development, test} = initConfig
   let _domain = develop ? development : test
   return _domain
@@ -19,7 +26,7 @@ const webApiConfig = {
    */
   instance: axios.create({
     baseURL: getDomain(), // 配置基础路径
-    timeout: 1000, // 默认请求超时时间
+    timeout: 10000, // 默认请求超时时间
     // 设置请求头格式：用自定义的覆盖 axios 自带的 'Content-Type': 'application/json; charset=UTF-8'
     headers: {
       'Content-Type': 'application/x-www-form-urlencoded',
@@ -32,7 +39,11 @@ const webApiConfig = {
    */
   setRequestInterceptors: () => {
     webApiConfig.instance.interceptors.request.use((config) => {
-      // 针对部分特殊的请求进行参数 序列化
+      /**
+       * 2018-35-23
+       * baiyunsong
+       * 针对部分特殊的请求进行参数 序列化
+       */
       if (config.method === 'post' || config.method === 'put' || config.method === 'delete') {
         if (config.data) {
           // 参数序列化
@@ -132,7 +143,9 @@ export function postFetch(url, params) {
 const WebAPI = {
   // 主题页面
   topics: {
-    topic: getFetch
+    topic: (url, params) => {
+      return getFetch(url, params)
+    }
   }
 }
 

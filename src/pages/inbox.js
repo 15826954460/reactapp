@@ -1,7 +1,10 @@
 import React, {Component} from "react";
 import WebAPI from '../config/axios';
 import {Loading} from '../config/router';
+import {LoadingInfo} from '../config/mobx';
+import {observer} from 'mobx-react';
 
+@observer
 export default class Inbox extends Component {
 
   constructor(props) {
@@ -14,27 +17,22 @@ export default class Inbox extends Component {
   }
 
   componentDidMount() {
-    Loading({
-      isLoading: this.state.isLoading,
-      isError: this.state.isError,
-    })
+    // Loading(true,false)
     WebAPI.topics.topic('topics').then((res) => {
       console.log(res.data)
-      // cnode 返回的是 boolean: true
-      if (res.success) {
-        this.setState({
-          ...this.state,
-          data: res.data,
-          isLoading: false,
-          isError: false,
-        })
-      } else {
-        Loading({
-          ...this.state,
-          isLoading: false,
-          isError: true,
-        })
-      }
+      /**
+       * 2018-58-23
+       * cnode 返回的是 boolean: true 根据实际项目进行配置
+       */
+      setTimeout(() => {
+        if (res.success) {
+          this.setState({ data: res.data })
+          // Loading(false,false)
+        } else {
+          this.setState({ data: res.data })
+          // Loading(false,true)
+        }
+      }, 5000)
     })
   }
 
@@ -42,17 +40,17 @@ export default class Inbox extends Component {
   }
 
   componentWillUnmount() {
-    this.setState({
-      data: null,
-      isLoading: true,
-      isError: false,
-    })
+    // this.setState({
+    //   data: null,
+    //   isLoading: true,
+    //   isError: false,
+    // })
   }
 
   render() {
     return (
       <div>
-        <h3>{"Inbox"}</h3>
+        {/*<h3>{"Inbox"}</h3>*/}
         {this.state.data ? this.state.data[0].id : null}
       </div>
     );

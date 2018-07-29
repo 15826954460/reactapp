@@ -1,39 +1,10 @@
-import React, {Component} from "react";
-import {
-    StyleSheet,
-    Text,
-    View,
-} from "react-native";
+/**
+ * 2018-28-29
+ * baiyunsong
+ * 全局通用方法请用驼峰命名
+ */
 
-export default class Vue2 extends Component {
+const utils = {
 
-    constructor(props) {
-        super(props);
-        this.state = {};
-    }
-
-    componentDidMount() {
-
-    }
-
-    componentWillMount() {
-
-    }
-
-    componentWillUnmount() {
-
-    }
-
-    render() {
-        return (
-            <View style={styles.container}>
-                <Text>Vue2.0</Text>
-            </View>
-        );
-    }
 }
-const styles = StyleSheet.create({
-    container: {
-        flex: 1
-    }
-});
+export {utils}
