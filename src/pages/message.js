@@ -8,20 +8,17 @@ export default class Inbox extends Component {
     }
 
     componentDidMount() {
-
     }
 
     componentWillMount() {
-
     }
 
     componentWillUnmount() {
-
     }
 
     render() {
         return (
-          <h3>Message</h3>
+          <h3>{'message'}</h3>
         );
     }
 }

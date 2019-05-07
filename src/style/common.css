@@ -1,0 +1,175 @@
+/* 关于flex布局部分 */
+
+.ccc {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ccfs {
+  flex-direction: column;
+  justify-content: center;
+  align-self: flex-start;
+}
+
+.ccfe {
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.cfsfs {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.cfsc {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.cfsfe {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.cfefs {
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.cfec {
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.cfefe {
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.csbfe {
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.csbc {
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.csbfs {
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.rcc {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.rcfs {
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.rcfe {
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.rfsc {
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.rfsfs {
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.rfsfe {
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.rfec {
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.rfefs {
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.rfefe {
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.rsbfs {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.rsbc {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+.rsac {
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.rsbfe {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.transform {
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+}
+
+.transformX{
+  transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+}
+
+.transformY{
+  transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+}

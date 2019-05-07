@@ -1,0 +1,35 @@
+.nrepeat {
+  background: no-repeat;
+}
+
+.transparent{
+  background: transparent;
+}
+
+.flex{
+  display: -webkit-flex; /* Safari */
+  display: flex;
+}
+
+.rel {
+  position: relative;
+}
+
+.abs{
+  position: absolute;
+}
+
+.fix {
+  position: fixed;
+}
+
+.last {
+  margin-left: auto;
+}
+
+.ma{
+  margin: 0 auto;
+}
+
+
+

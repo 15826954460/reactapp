@@ -23,11 +23,11 @@ const Loading = ({error, pastDelay}) => {
  * 2018-56-23
  * 所有页面的引入 加载组件 大于200毫秒时 才会显示 loading 动画
  */
-const Welcome = Loadable({
-  loader: () => import('../pages/welcome'),
-  loading: Loading,
-  delay: 200
-});
+// const Welcome = Loadable({
+//   loader: () => import('../pages/welcome'),
+//   loading: Loading,
+//   delay: 200
+// });
 const About = Loadable({
   loader: () => import('../pages/about'),
   loading: Loading,
@@ -43,14 +43,19 @@ const Message = Loadable({
   loading: Loading,
   delay: 200
 });
+const Home = Loadable({
+  loader: () => import('../pages/home/index'),
+  loading: Loading,
+  delay: 200
+});
 /**
  * 2018-56-23
  * 路由配置
  */
 const Routes = () => {
   return [
-    <Route path='/' component={Welcome}
-           exact={true} key={'welcome'}/>,
+    <Route path='/' component={Home}
+           exact={true} key={'Home'}/>,
     <Route path='/About' component={About} key={'About'}/>,
     <Route path='/Inbox' component={Inbox} key={'Inbox'}/>,
     <Route path='/Message' component={Message} key={'Message'}/>,

@@ -1,8 +1,6 @@
-import React, {Component} from "react";
-import WebAPI from '../config/axios';
-import {Loading} from '../config/router';
-import {LoadingInfo} from '../config/mobx';
-import {observer} from 'mobx-react';
+import React, { Component } from "react";
+import WebAPI from '../config/webAPI';
+import { observer } from 'mobx-react';
 
 @observer
 export default class Inbox extends Component {
@@ -27,10 +25,8 @@ export default class Inbox extends Component {
       setTimeout(() => {
         if (res.success) {
           this.setState({ data: res.data })
-          // Loading(false,false)
         } else {
           this.setState({ data: res.data })
-          // Loading(false,true)
         }
       }, 5000)
     })
